@@ -29,7 +29,7 @@ ECUST-XX/ssSetup for Docker tutum/centos:centos7
  ```
 安装命令
 ```shell
-   yum install -y wget;wget --no-check-certificate https://github.com/ECUST-XX/ssSetup/blob/master/ECUSTss.sh;bash /root/ECUSTss.sh;
+   yum install -y wget;wget --no-check-certificate https://raw.githubusercontent.com/ECUST-XX/ssSetup/master/ECUSTss.sh;bash /root/ECUSTss.sh;
  ```
 
 文件说明
@@ -38,4 +38,4 @@ ECUST-XX/ssSetup for Docker tutum/centos:centos7
 
 **shadowsocks-go.sh** 为[Teddysun](i@teddysun.com)的通用shadowsocks-go安装脚本
 
-**centos_ss.docx** 为ss手动安装步骤
+**centos_ss.docx** 为ss手动安装步骤说明
