@@ -4,6 +4,12 @@ ECUST-XX/ssSetup for Docker tutum/centos:centos7
 
 用于搭建ss与修改root密码
 
+!!!不推荐使用本脚本!!!
+------------
+由于tutum/centos:centos7体积太大导致docker不稳定，所以已经不推荐使用该系统用来搭建SS
+
+这里推荐使用mo2017/shadowsocks的Docker镜像，部署简单，体积小且稳定性较高
+
 使用说明
 ------------
 
@@ -39,3 +45,7 @@ ECUST-XX/ssSetup for Docker tutum/centos:centos7
 **shadowsocks-go.sh** 为[Teddysun](i@teddysun.com)的通用shadowsocks-go安装脚本
 
 **centos_ss.docx** 为ss手动安装步骤说明
+
+**curl.php** 为调用官方API的部分函数，方便批量处理
+
+**do.php** 为API执行例子
