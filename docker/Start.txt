@@ -1,0 +1,16 @@
+#!/bin/sh
+[ $PASS = "**NULL**" ] && PASS=`601qaz106`
+[ $PORT = "**NULL**" ] && PORT=`9621`
+cat > /etc/shadowsocks/config.json << EOF
+{
+	"server":"0.0.0.0",
+	"server_port":8388,
+	"local_port":${PORT},
+	"password":"${PASS}",
+	"timeout":600,
+	"method":"aes-256-cfb"
+}
+EOF
+echo "=> The PORT is ${PORT}"
+echo "=> The Password is ${PASS}"
+ssserver -c /etc/shadowsocks/config.json
