@@ -4,13 +4,22 @@ ECUST-XX/ssSetup for Docker tutum/centos:centos7
 
 用于搭建ss与修改root密码
 
-!!!不推荐使用本脚本!!!
+!!!现在不推荐使用本脚本!!!
 ------------
 由于tutum/centos:centos7体积太大导致docker不稳定，所以已经不推荐使用该系统用来搭建SS
 
 这里推荐使用mo2017/shadowsocks的Docker镜像，部署简单，体积小且稳定性较高
 
-使用说明
+由于arukas.io对8388端口屏蔽，导致该docker不能正常使用，所以在mo2017/shadowsocks基础上重新修改，增加PORT环境变量
+
+Docker使用说明
+------------
+
+添加ENV:
+	PASS = yourpass(601qaz106)
+	PORT = yourport(9621)
+
+ECUSTss.sh使用说明
 ------------
 
 本脚本只在tutum/centos:centos7做过测试并正常通过
@@ -49,3 +58,11 @@ ECUST-XX/ssSetup for Docker tutum/centos:centos7
 **curl.php** 为调用官方API的部分函数，方便批量处理
 
 **do.php** 为API执行例子
+
+**docker** docker文件夹
+
+**Dockerfile** dockerfile 基于alpine linux
+
+**Start** alpine中的ss配置脚本
+
+**repositories** alpine国内镜像源
